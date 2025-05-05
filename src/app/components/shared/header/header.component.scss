@@ -1,0 +1,16 @@
+.header-content{
+    background: var(--neutral-900);
+    color: var(--neutral-100);
+    font: 14px "Clash_Grotesk";
+    padding: 12px;
+    .text{
+        font-weight: 500;
+    }
+    .tag{
+        font-weight: 500;
+        background-color: var(--neutral-700);
+        border-radius:23px;
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}

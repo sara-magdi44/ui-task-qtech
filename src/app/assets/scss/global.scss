@@ -1,0 +1,27 @@
+@use "./components/styles" as *;
+@use "variables" as *;
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: unset !important;
+}
+a {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

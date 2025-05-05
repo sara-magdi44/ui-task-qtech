@@ -1,0 +1,40 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-content d-flex justify-content-between align-items-center w-100">
+            <div class="navbrand">
+                <img src="/assets/images/brandlogo.png" alt="John Lewis" class="brand-image">
+            </div>
+            <button class="navbar-toggle d-lg-none" (click)="toggleMenu()">
+                <span class="navbar-toggle-icon"></span>
+            </button>
+            <div class="navbar-left" [class.active]="isMenuOpen">
+                <ul class="icon-list d-flex flex-column flex-lg-row align-items-start align-items-lg-center">
+                    <li class="search-item list-item d-flex align-items-center"> 
+                        <div class="search-container" [class.active]="isSearchActive">
+                            <div class="search-icon-container" (click)="toggleSearch()">
+                                <fa-icon [icon]="faSearch"></fa-icon>
+                            </div> 
+                            <input type="text" class="search-input" placeholder="Search..." [(ngModel)]="searchQuery" (keyup.enter)="onSearch()">
+                           
+                        </div>
+                    </li>
+                    <li class="list-item d-flex align-items-center">
+                        <p class="categories mb-0">Categories</p>
+                        <img src="/assets/images/svg/arrowdown.svg" class="list-item-icon" alt="">
+                    </li>
+                    <li class="list-item d-flex align-items-center">
+                        <img src="/assets/images/svg/user.svg" alt="">
+                        <a href="#" class="px-1">Sign in</a>
+                    </li>
+                    <li class="list-item d-flex align-items-center">
+                        <img src="/assets/images/svg/heart.svg" alt="">
+                    </li>
+                    <li class="list-item d-flex align-items-center">
+                        <img src="/assets/images/svg/basket.svg" alt="">
+                        <span class="cart-count">1</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

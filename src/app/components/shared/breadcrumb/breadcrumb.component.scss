@@ -1,0 +1,23 @@
+.breadcrumb-container{
+    --bs-breadcrumb-divider: ">";
+    padding: 31px 0 ;
+    gap: 14px;
+    border-top: 1px solid ;
+    border-image-source: url(/assets/images/svg/border.svg);
+    border-image-width: 1;
+    border-image-slice: 3; 
+    font-family: "Clash_Grotesk";
+    font-weight: 500;
+    .breadcrumb{
+        .breadcrumb-item{
+            padding: 0;
+            font-size: 16px;
+            a{
+                color: var(--neutral-500);
+            }
+            &:last-of-type {
+                color: var(--neutral-800);
+              }
+        }
+    }
+}

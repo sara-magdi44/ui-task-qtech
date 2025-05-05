@@ -1,0 +1,50 @@
+<div class="product-reviews-container">
+  <h2 class="jh2 product_review__head">Product Reviews</h2>
+  <div class="row prodcut-review__section">
+    <div class="col-md-4 d-flex flex-row align-items-center">
+      <div class="rating-circle">
+        <svg viewBox="0 0 36 36" class="rating-circle-svg">
+          <path
+            d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+            class="rating-circle-background"
+          />
+          <path
+            d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"
+            class="rating-circle-progress"
+            [style.stroke-dasharray]="' 38, 21;'"
+          />
+        </svg>
+        <span class="rating-value jspansmallBold">4.5</span>
+      </div>
+      <div class="rating-details ms-3">
+        <div class="stars text-warning">
+            @for (star of rating_stars; track $index) {
+                <fa-icon [icon]="star <= 4.5 ? faStar : faStarHalfAlt" class="me-1"></fa-icon>
+
+            }
+        </div>
+        <p class="jp mt-2">from 1,250 reviews</p>
+      </div>
+    </div>
+
+    <div class="col-md-8">
+      <div class="rating-breakdown">
+        @for (rating of ratings; track $index) {
+            <div class="rating-row d-flex align-items-center mb-2">
+                <span class="rating-label jspansmallLightBold me-2">{{ rating.value }}.0</span>
+                <img src="/assets/images/svg/star.svg" alt="">
+                <div class="rating-bar flex-grow-1 position-relative">
+                  <div class="filled-bar bg-dark" [style.width.%]="rating.percentage"></div>
+                </div>
+                <span class="rating-count jspansmallLightBold ms-2">{{ rating.count }}</span>
+              </div>
+        }
+        
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,117 @@
+<div class="container product-container">
+   <div class="row d-flex justify-content-between">
+      <div class="col-md-6 col-lg-6 d-flex flex-row justify-content-between">
+         <div class="col-10 col-md-10 col-lg-10">
+            <div class="product-slider">
+               <div class="image-container">
+                  <img [src]="previewSrc" id="preview" alt="Product preview" />
+                  <div class="img-prev d-flex flex-row justify-content-between align-items-center">
+                     @for (img of images; track $index) {
+                        <div class="img-slide" [class.active]="previewSrc === img">
+                           <img [src]="img" (click)="selectImage($index)" alt="Product thumbnail"/>
+                        </div>
+                     }
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-1 d-flex justify-content-center">
+            <div class="d-flex flex-column justify-content-between content">
+               <div class="d-flex flex-column actionbutton ">
+                  <div class="d-flex justify-content-center align-items-center">
+                     <button>
+                        <img src="/assets/images/svg/share.svg" alt="Share">
+                     </button>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center">
+                     <button>
+                        <img src="/assets/images/svg/heart.svg" alt="Wishlist">
+                     </button>
+                  </div>
+               </div>
+               
+               <div class="d-flex flex-column actionbutton ">
+                  <button (click)="prevImage()">
+                     <img src="/assets/images/svg/rightArrow.svg" alt="Previous">
+                  </button>
+                  <button  (click)="nextImage()">
+                     <img src="/assets/images/svg/leftArrow.svg" alt="Next">
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="col-md-5 col-lg-5">
+         <div class="prodcut-details-container">
+          
+            <div class="details">
+               <span class="detailsSpan jspansmall">{{product.productName}}</span>
+               <h1 class="jh1 detailsHead">{{product.productDescription}}</h1>
+               <div class="price-container d-flex flex-row justify-content-between align-items-center">
+                  <div class="price d-flex flex-row align-items-center">
+                     <span class="oldPrice jspansmall">£{{product.productOldPrice}}.00</span>
+                     <span class="newPrice jspan">£{{product.productNewPrice}}.00</span>
+                  </div>
+                  <div class="selling-rate d-flex flex-row gap-1 justify-content-center align-items-center">
+                     <span class="jspansmallLight selling-rateSpan"> {{product.productSold}} Sold</span>
+                     <img src="/assets/images/svg/dot.svg" alt="dot-svg" class="dot-selling-rate">
+                     <img src="/assets/images/svg/star.svg" alt="star-svg" class="star-sellingt-rate">
+                     <span class="jspan rateSpan">{{product.productRate}}</span>
+                  </div>
+               </div>
+            </div>
+            <div class="decription">
+               <span class="jspan descriptionSpan">Description:</span>
+               <p class="jp descriptionP"> {{FullDescription ? product.fullDescription : (product.fullDescription | slice:0:100) + '...'}} <span class="jspansmallBold" (click)="Descirption()" >{{FullDescription ? 'See less': 'See More'}}</span></p>
+            </div>
+            <div class="colorRange">
+               <div class="chosenColor">
+                  <span class="jspansmall jColor">Color:</span>
+                  <span class="jspan jColorName"> {{selectedColorName}}</span>
+               </div>
+               <div class="availableColors d-flex flex-row">
+                  @for (color of colors; track $index) {
+                     <button class="jbuttonProductStyle colorPalette"
+                        [class.activeColor]="selectedColor === color"
+                        (click)="selectColor(color, $index)">
+                        <span class="innerColor"
+                           [ngStyle]="{ 'background-color': color }"></span>
+                     </button>
+                  }
+               </div>
+            </div>
+            <div class="size">
+               <div class="chosenSize d-flex flex-row justify-content-between align-items-center">
+                  <div class="selectedSize">
+                     <span class="jspansmall jspanSize">Size:</span>
+                     <span class="jspan jspanChosenSize"> {{selectedSize}}</span>
+                  </div>
+                  <div>
+                     <span class="sizeChart">View Size Chart</span>
+                  </div>
+               </div>
+               <div class="availableSize d-flex flex-row justify-content-between align-items-center">
+                  @for (size of sizes; track $index) {
+                     <button class="jbuttonProductStyle sizeCount"
+                        [class.activeSize]="selectedSize === size"
+                        (click)="selectSize(size)">{{size}}</button>
+                  }
+               </div>
+            </div>
+            <div class="processButton row ">
+               <div class="col-12 col-md-7 my-1">
+                  <button type="button" class="cartButton jbutton w-100">Add To Cart</button>
+               </div>
+               <div class="col-12 col-md-5 my-1">
+                  <button type="button" class="checkoutButton jbutton w-100">Checkout</button>
+               </div>
+            </div>
+            <div class="delivery d-flex">
+               <span class="deliverySpan jspansmall">Delivery T&C</span>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="related-products">
+  <div class="d-flex align-items-center justify-content-between mb-4">
+    <h2 class="related-products__heading jh2">Related Products</h2>
+    <a href="/products" class="related-products__view-all jspansmall">View All</a>
+  </div>
+  <div class="related-products__list row justify-content-between">
+    @for (product of prodcuts; track $index) {
+      <div class="col-12 col-sm-6 col-lg-2">
+        <div class="related-product">
+          <div class="related-product__image-wrapper">
+            <img [src]="product.image" class="related-product__image" alt="{{product.name}}" />
+          </div>
+          <h3 class="related-product__name jh3 mt-3">{{product.name}}</h3>
+          <p class="related-product__description jpLight">{{product.describtion}}</p>
+          <p class="related-product__price jpBold mt-2">{{product.price}}</p>
+          <div class="d-flex align-items-center gap-3 mt-2">
+            <div class="related-product__rate d-flex align-items-center gap-1">
+              <img src="/assets/images/svg/star.svg" alt="rating" class="rate-icon">
+              <span class="jspansmallBold">{{product.rating}}</span>
+            </div>
+            <div class="related-product__sold d-flex align-items-center gap-1">
+              <img src="/assets/images/svg/dot.svg" alt="" class="dot-icon">
+              <span class="jspansmallLight sold_span">{{product.sold}} Sold</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

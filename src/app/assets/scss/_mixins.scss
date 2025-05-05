@@ -1,0 +1,34 @@
+
+
+@mixin background-image(
+  $image-url: none,
+  $position: center,
+  $size: cover,
+  $repeat: no-repeat,
+  $attachment: scroll,
+  $color: transparent,
+  $width: auto,
+  $height: auto
+) {
+  @if $image-url != none {
+    background-image: url($image-url);
+  } @else {
+    background-image: none; 
+  }
+  background-position: $position;
+  background-size: $size;
+  background-repeat: $repeat;
+  background-attachment: $attachment;
+  background-color: $color;
+  width: $width;
+  height: $height;
+}
+@mixin transiton ($time :0.3){
+    transition: 0.3s all ease-in-out;
+}
+@mixin hove($transition){
+    transition: #{$transition}s all ease-in-out;
+    &:hover{
+        @content;
+    }
+}

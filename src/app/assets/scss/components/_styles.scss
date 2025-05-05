@@ -1,0 +1,124 @@
+button{
+    font-family: "Clash_Grotesk" !important;
+    cursor: pointer;
+    &.actionbutton {
+        background-color: var(--neutral-200);
+        border-radius: 8px ;
+        border: none;
+        outline: none;
+    }
+    &.jbutton{
+        font-weight: 600;
+        font-size: 20px;
+        border-radius: 8px;
+    }
+    &.jbuttonProductStyle{
+        color: var(--neutral-900);
+        border-radius:8px;
+        font-weight: 600;
+        font-size: 16px;
+        outline: none;
+        padding:5px;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--neutral-50);
+        border: 1px solid var(--neutral-300);
+        &.activeSize{
+            background-color: var(--neutral-200);
+            border: 1px solid var(--neutral-800);
+        }
+        &.activeColor{
+            padding: 5px !important;
+            background-color: transparent;
+            border: 1px solid var(--neutral-800);
+        }
+    }
+}
+span{
+    font-family: "Clash_Grotesk";
+    &.jspansmall{
+        color: var(--neutral-600);
+        font-weight: 500;
+    }
+    &.jspan{
+        color: var(--neutral-800);    
+        font-weight: 600;
+    }
+    &.jspansmallLight{
+        color: var( --neutral-600);
+        font-weight: 400;
+    }
+    &.jspansmallBold{
+        color: var(--secondary-900);
+        font-weight: 600;
+    }
+    &.jspansmallLightBold{
+        color: var(--secondary-900);
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
+h1{
+    font-family: "Clash_Grotesk";
+    &.jh1{
+        color: var(--neutral-800);
+        font-weight: 600;
+        letter-spacing: -0.5%;
+    }
+}
+h2{
+    font-family: "Clash_Grotesk";
+    &.jh2{
+        color:var(--neutral-900);
+        font-weight: 600;
+        font-size: 28px;
+    }
+}
+h3{
+    font-family: "Clash_Grotesk";
+    &.jh3{
+        color: var(--neutral-900);
+        font-weight: 600;
+        font-size: 17px;
+    }
+    &.jh3Bold{
+        color: var(--neutral-900);
+        font-weight: 600;
+        font-size: 14px;
+    }
+}
+p{
+    font-family: "Clash_Grotesk";
+   &.jp{
+        color: var(--neutral-600);
+        font-weight: 400;
+    }
+    &.jpspan{
+            color: var(--neutral-900) ;
+            font-weight: 500;
+    }
+    
+    &.jpBold{
+        color: var(--neutral-900);
+        font-weight: 600;
+    }
+    &.jpLight{
+        color: var(--neutral-600);
+        font-weight: 400;
+    }
+
+}
+a{
+    font-family: "Clash_Grotesk";
+    &.ja{
+        color: var(--neutral-600);
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: underline ;
+        &:hover{
+           color: var(--neutral-500);
+           text-decoration: underline ;
+
+        }
+    }
+    
+}

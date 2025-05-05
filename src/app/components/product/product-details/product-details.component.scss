@@ -1,0 +1,214 @@
+.product-container{
+    padding-bottom: 80px;
+
+}
+
+.image-container {
+    img {
+        width: 100%;
+        height: 610px;
+        object-fit: cover;
+        border-radius: 8px;
+        background-color: var(--neutral-200);
+    }
+
+    .img-prev {
+        margin: 10px 0;
+        gap: 20px;
+        overflow-x: auto;
+        padding: 4px;
+
+        .img-slide {
+            width: 76px;
+            height: 100px;
+            flex: 0 0 auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &.active {
+                border: 1px solid var(--neutral-800);
+            }
+        }
+    }
+}
+
+.content {
+    padding-bottom: 8.1rem;
+    .actionbutton{
+        gap: 20px;
+    button  {
+        width: 40px;
+        height: 40px;
+        background-color: var(--neutral-200);
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: var(--neutral-100);
+        }
+        img {
+            width: 20px;
+            height: 20px;
+            padding: 0;
+        }
+    } 
+    }
+   
+}
+
+.details {
+    .detailsSpan {
+        font-size: 16px;
+    }
+    .detailsHead {
+        font-size: 36px;
+        padding-top: 12px ;
+        padding-bottom: 20px;
+    }
+    .price-container {
+        padding-bottom: 28px;
+        border-bottom: 1px solid;
+        border-image-source: url(/assets/images/svg/border.svg);
+        border-image-width: 1;
+        border-image-slice: 3;
+    }
+    .price {
+        gap: 16px;
+        .oldPrice {
+            text-decoration: line-through;
+            font-size: 18px;
+        }
+        .newPrice {
+            font-size: 28px;
+        }
+    }
+}
+
+.decription {
+    padding-top: 28px;
+    .descriptionSpan {
+        font-size: 20px;
+    }
+    .descriptionP {
+        font-size: 16px;
+    }
+}
+
+.colorRange {
+    padding: 40px 0;
+    .chosenColor {
+        padding-bottom: 18px;
+        .jColor,
+        .jColorName {
+            font-size: 20px;
+        }
+    }
+    .availableColors {
+        gap: 14px;
+        .colorPalette {
+            width: 74px;
+            height: 40px;
+            padding: 0;
+        }
+        .innerColor {
+            display: inline-block;
+            width: 100%;
+            border-radius: 8px;
+            height: 100%;
+        }
+    }
+}
+
+.size {
+    padding-bottom: 56px;
+    .jspanSize,
+    .jspanChosenSize {
+        font-size: 20px;
+    }
+    .sizeChart {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--neutral-70);
+        text-decoration: underline;
+    }
+    .availableSize {
+        gap: 14px;
+        padding-top: 18px;
+        .sizeCount {
+            width: 100%;
+        }
+    }
+}
+
+.selling-rate {
+    img {
+        width: 24px;
+        height: 24px;
+    }
+    .selling-rateSpan {
+        font-size: 20px;
+    }
+    .rateSpan {
+        font-size: 24px;
+    }
+    .dot-selling-rate{
+        width: 6px;
+        height: 6px;
+        margin: 0 8px ;
+    }
+    .star-sellingt-rate{
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+
+.delivery {
+    .deliverySpan {
+        text-decoration: underline;
+        font-size: 16px;
+    }
+}
+.processButton {
+    margin-bottom: 38px;
+    
+    .cartButton {
+        height: 56px;
+        cursor: pointer;
+        background-color: var(--neutral-900);
+        color: var(--neutral-50);
+        border: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            background-color: var(--neutral-800);
+        }
+    }
+    
+    .checkoutButton {
+        height: 56px;
+        cursor: pointer;
+        color: var(--neutral-900);
+        background-color: var(--neutral-50);
+        border: 1px solid var(--neutral-400);
+        font-weight: 600;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            background-color: var(--neutral-100);
+            border-color: var(--neutral-900);
+        }
+    }
+}
