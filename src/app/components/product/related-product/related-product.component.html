@@ -5,7 +5,7 @@
   </div>
   <div class="related-products__list row justify-content-between">
     @for (product of prodcuts; track $index) {
-      <div class="col-12 col-sm-6 col-lg-2">
+      <div class="col-12 col-sm-6 col-lg-2 mt-4">
         <div class="related-product">
           <div class="related-product__image-wrapper">
             <img [src]="product.image" class="related-product__image" alt="{{product.name}}" />
